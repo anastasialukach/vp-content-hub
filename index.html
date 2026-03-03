@@ -19,44 +19,24 @@
             --text-secondary: #6e6e73;
             --text-tertiary: #86868b;
             --accent: #0066cc;
-            --accent-light: #f5f5ff;
             --success: #34c759;
             --shadow-subtle: 0 2px 8px rgba(0, 0, 0, 0.04);
             --shadow-medium: 0 8px 32px rgba(0, 0, 0, 0.08);
-            --shadow-large: 0 24px 64px rgba(0, 0, 0, 0.12);
             --radius-sm: 12px;
             --radius-md: 18px;
             --radius-lg: 28px;
         }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
+        * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
             background: var(--bg-primary);
             color: var(--text-primary);
             line-height: 1.6;
             min-height: 100vh;
-            background-image: 
-                radial-gradient(ellipse at 20% 0%, rgba(0, 102, 204, 0.04) 0%, transparent 50%),
-                radial-gradient(ellipse at 80% 100%, rgba(0, 0, 0, 0.02) 0%, transparent 50%);
+            background-image: radial-gradient(ellipse at 20% 0%, rgba(0, 102, 204, 0.04) 0%, transparent 50%), radial-gradient(ellipse at 80% 100%, rgba(0, 0, 0, 0.02) 0%, transparent 50%);
         }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 40px 24px;
-        }
-
-        header {
-            text-align: center;
-            margin-bottom: 48px;
-        }
-
+        .container { max-width: 1200px; margin: 0 auto; padding: 40px 24px; }
+        header { text-align: center; margin-bottom: 48px; }
         h1 {
             font-family: 'Cormorant Garamond', Georgia, serif;
             font-size: 3.5rem;
@@ -68,22 +48,8 @@
             -webkit-text-fill-color: transparent;
             background-clip: text;
         }
-
-        .subtitle {
-            font-size: 1.1rem;
-            color: var(--text-secondary);
-            font-weight: 300;
-            letter-spacing: 0.02em;
-        }
-
-        .nav-tabs {
-            display: flex;
-            justify-content: center;
-            gap: 8px;
-            margin-bottom: 40px;
-            flex-wrap: wrap;
-        }
-
+        .subtitle { font-size: 1.1rem; color: var(--text-secondary); font-weight: 300; }
+        .nav-tabs { display: flex; justify-content: center; gap: 8px; margin-bottom: 40px; flex-wrap: wrap; }
         .nav-tab {
             padding: 12px 24px;
             background: var(--bg-glass);
@@ -95,41 +61,13 @@
             cursor: pointer;
             transition: all 0.2s ease;
             backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
         }
-
-        .nav-tab:hover {
-            background: var(--bg-glass-strong);
-            color: var(--text-primary);
-        }
-
-        .nav-tab.active {
-            background: var(--text-primary);
-            color: white;
-            border-color: var(--text-primary);
-        }
-
-        .section {
-            display: none;
-        }
-
-        .section.active {
-            display: block;
-            animation: fadeIn 0.3s ease;
-        }
-
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(8px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        .stats-row {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 16px;
-            margin-bottom: 32px;
-        }
-
+        .nav-tab:hover { background: var(--bg-glass-strong); color: var(--text-primary); }
+        .nav-tab.active { background: var(--text-primary); color: white; border-color: var(--text-primary); }
+        .section { display: none; }
+        .section.active { display: block; animation: fadeIn 0.3s ease; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+        .stats-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 16px; margin-bottom: 32px; }
         .stat-card {
             background: var(--bg-glass);
             border: 1px solid var(--border);
@@ -138,25 +76,9 @@
             backdrop-filter: blur(20px);
             text-align: center;
         }
-
-        .stat-number {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 2.5rem;
-            font-weight: 600;
-            color: var(--text-primary);
-        }
-
-        .stat-label {
-            font-size: 0.85rem;
-            color: var(--text-secondary);
-            margin-top: 4px;
-        }
-
-        .content-grid {
-            display: grid;
-            gap: 16px;
-        }
-
+        .stat-number { font-family: 'Cormorant Garamond', serif; font-size: 2.5rem; font-weight: 600; }
+        .stat-label { font-size: 0.85rem; color: var(--text-secondary); margin-top: 4px; }
+        .content-grid { display: grid; gap: 16px; }
         .content-card {
             background: var(--bg-glass-strong);
             border: 1px solid var(--border-light);
@@ -165,72 +87,24 @@
             backdrop-filter: blur(20px);
             transition: all 0.2s ease;
         }
-
-        .content-card:hover {
-            transform: translateY(-2px);
-            box-shadow: var(--shadow-medium);
-        }
-
-        .content-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-            margin-bottom: 12px;
-        }
-
-        .content-title {
-            font-family: 'Cormorant Garamond', Georgia, serif;
-            font-size: 1.4rem;
-            font-weight: 500;
-            color: var(--text-primary);
-        }
-
-        .content-meta {
-            display: flex;
-            gap: 8px;
-            align-items: center;
-        }
-
+        .content-card:hover { transform: translateY(-2px); box-shadow: var(--shadow-medium); }
+        .content-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 12px; flex-wrap: wrap; gap: 8px; }
+        .content-title { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.4rem; font-weight: 500; }
         .platform-badge {
             padding: 4px 12px;
             border-radius: 100px;
-            font-size: 0.75rem;
-            font-weight: 500;
+            font-size: 0.7rem;
+            font-weight: 600;
             text-transform: uppercase;
             letter-spacing: 0.05em;
         }
-
         .platform-linkedin { background: #e8f4ff; color: #0066cc; }
         .platform-twitter { background: #f0f0f0; color: #1d1d1f; }
         .platform-instagram { background: #fdf0f5; color: #e1306c; }
         .platform-substack { background: #fff4e6; color: #ff671b; }
         .platform-general { background: #f5f5f7; color: #6e6e73; }
-
-        .content-preview {
-            font-size: 0.9rem;
-            color: var(--text-secondary);
-            line-height: 1.7;
-            margin-bottom: 16px;
-            max-height: 100px;
-            overflow: hidden;
-            position: relative;
-        }
-
-        .content-preview::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            height: 40px;
-            background: linear-gradient(transparent, var(--bg-glass-strong));
-        }
-
-        .content-actions {
-            display: flex;
-            gap: 8px;
-        }
-
+        .content-preview { font-size: 0.9rem; color: var(--text-secondary); margin-bottom: 16px; line-height: 1.7; }
+        .content-actions { display: flex; gap: 8px; flex-wrap: wrap; }
         .btn {
             padding: 10px 20px;
             border-radius: var(--radius-sm);
@@ -243,27 +117,8 @@
             align-items: center;
             gap: 6px;
         }
-
-        .btn-primary {
-            background: var(--text-primary);
-            color: white;
-        }
-
-        .btn-primary:hover {
-            background: #333;
-            transform: scale(1.02);
-        }
-
-        .btn-secondary {
-            background: var(--bg-secondary);
-            color: var(--text-primary);
-            border: 1px solid var(--border);
-        }
-
-        .btn-secondary:hover {
-            background: #e8e8ed;
-        }
-
+        .btn-primary { background: var(--text-primary); color: white; }
+        .btn-primary:hover { background: #333; transform: scale(1.02); }
         .modal {
             display: none;
             position: fixed;
@@ -278,12 +133,7 @@
             justify-content: center;
             padding: 24px;
         }
-
-        .modal.active {
-            display: flex;
-            animation: fadeIn 0.2s ease;
-        }
-
+        .modal.active { display: flex; animation: fadeIn 0.2s ease; }
         .modal-content {
             background: var(--bg-primary);
             border-radius: var(--radius-lg);
@@ -294,47 +144,21 @@
             padding: 32px;
             box-shadow: var(--shadow-large);
         }
-
-        .modal-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 24px;
-            padding-bottom: 16px;
-            border-bottom: 1px solid var(--border);
-        }
-
-        .modal-title {
-            font-family: 'Cormorant Garamond', Georgia, serif;
-            font-size: 1.8rem;
-            font-weight: 500;
-        }
-
+        .modal-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 24px; padding-bottom: 16px; border-bottom: 1px solid var(--border); }
+        .modal-title { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.8rem; font-weight: 500; }
         .modal-close {
-            width: 32px;
-            height: 32px;
+            width: 36px;
+            height: 36px;
             border-radius: 50%;
             border: none;
             background: var(--bg-secondary);
             cursor: pointer;
-            font-size: 1.2rem;
+            font-size: 1.4rem;
             display: flex;
             align-items: center;
             justify-content: center;
         }
-
-        .full-content {
-            font-size: 0.95rem;
-            line-height: 1.8;
-            white-space: pre-wrap;
-            font-family: 'Inter', sans-serif;
-        }
-
-        .full-content h1, .full-content h2, .full-content h3 {
-            font-family: 'Cormorant Garamond', Georgia, serif;
-            margin: 24px 0 12px;
-        }
-
+        .full-content { font-size: 0.95rem; line-height: 1.8; white-space: pre-wrap; }
         .copy-feedback {
             position: fixed;
             bottom: 24px;
@@ -350,42 +174,8 @@
             transition: all 0.3s ease;
             z-index: 2000;
         }
-
-        .copy-feedback.show {
-            transform: translateX(-50%) translateY(0);
-            opacity: 1;
-        }
-
-        .daily-section {
-            margin-top: 48px;
-        }
-
-        .daily-header {
-            font-family: 'Cormorant Garamond', Georgia, serif;
-            font-size: 1.8rem;
-            font-weight: 500;
-            margin-bottom: 20px;
-            display: flex;
-            align-items: center;
-            gap: 12px;
-        }
-
-        .daily-badge {
-            background: linear-gradient(135deg, #0066cc, #004499);
-            color: white;
-            padding: 4px 12px;
-            border-radius: 100px;
-            font-size: 0.7rem;
-            font-weight: 600;
-            font-family: 'Inter', sans-serif;
-            letter-spacing: 0.05em;
-        }
-
-        @media (max-width: 768px) {
-            h1 { font-size: 2.5rem; }
-            .container { padding: 24px 16px; }
-            .stats-row { grid-template-columns: repeat(2, 1fr); }
-        }
+        .copy-feedback.show { transform: translateX(-50%) translateY(0); opacity: 1; }
+        @media (max-width: 768px) { h1 { font-size: 2.5rem; } .container { padding: 24px 16px; } }
     </style>
 </head>
 <body>
@@ -394,8 +184,7 @@
             <h1>Venture Protocol</h1>
             <p class="subtitle">Content Hub — Ana Lukach</p>
         </header>
-
-        <nav class="nav-tabs">
+        <nav class="nav-tabs" id="navTabs">
             <button class="nav-tab active" data-tab="overview">Overview</button>
             <button class="nav-tab" data-tab="substack">Essays</button>
             <button class="nav-tab" data-tab="twitter">X / Twitter</button>
@@ -405,432 +194,213 @@
             <button class="nav-tab" data-tab="today">Today</button>
         </nav>
 
-        <!-- Overview Section -->
         <section id="overview" class="section active">
             <div class="stats-row">
-                <div class="stat-card">
-                    <div class="stat-number">4</div>
-                    <div class="stat-label">Essays</div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-number">4</div>
-                    <div class="stat-label">Show Notes</div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-number">15</div>
-                    <div class="stat-label">X Posts</div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-number">16</div>
-                    <div class="stat-label">LinkedIn</div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-number">8</div>
-                    <div class="stat-label">Instagram</div>
-                </div>
+                <div class="stat-card"><div class="stat-number">4</div><div class="stat-label">Essays</div></div>
+                <div class="stat-card"><div class="stat-number">4</div><div class="stat-label">Show Notes</div></div>
+                <div class="stat-card"><div class="stat-number">15</div><div class="stat-label">X Posts</div></div>
+                <div class="stat-card"><div class="stat-number">16</div><div class="stat-label">LinkedIn</div></div>
+                <div class="stat-card"><div class="stat-number">8</div><div class="stat-label">Instagram</div></div>
             </div>
-
             <h3 style="font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; margin-bottom: 16px;">Latest Content</h3>
             <div class="content-grid" id="latest-content"></div>
         </section>
 
-        <!-- Essays Section -->
-        <section id="substack" class="section">
-            <div class="content-grid" id="substack-content"></div>
-        </section>
-
-        <!-- Twitter Section -->
-        <section id="twitter" class="section">
-            <div class="content-grid" id="twitter-content"></div>
-        </section>
-
-        <!-- LinkedIn Section -->
-        <section id="linkedin" class="section">
-            <div class="content-grid" id="linkedin-content"></div>
-        </section>
-
-        <!-- Instagram Section -->
-        <section id="instagram" class="section">
-            <div class="content-grid" id="instagram-content"></div>
-        </section>
-
-        <!-- Show Notes Section -->
-        <section id="shows" class="section">
-            <div class="content-grid" id="shows-content"></div>
-        </section>
-
-        <!-- Today Section -->
-        <section id="today" class="section">
-            <div class="daily-section">
-                <div class="daily-header">
-                    March 3, 2026
-                    <span class="daily-badge">TODAY</span>
-                </div>
-                <div class="content-grid" id="today-content"></div>
-            </div>
-        </section>
+        <section id="substack" class="section"><div class="content-grid" id="substack-content"></div></section>
+        <section id="twitter" class="section"><div class="content-grid" id="twitter-content"></div></section>
+        <section id="linkedin" class="section"><div class="content-grid" id="linkedin-content"></div></section>
+        <section id="instagram" class="section"><div class="content-grid" id="instagram-content"></div></section>
+        <section id="shows" class="section"><div class="content-grid" id="shows-content"></div></section>
+        <section id="today" class="section"><div class="content-grid" id="today-content"></div></section>
     </div>
 
-    <!-- Modal -->
     <div class="modal" id="modal">
         <div class="modal-content">
             <div class="modal-header">
                 <h2 class="modal-title" id="modal-title"></h2>
-                <button class="modal-close" onclick="closeModal()">×</button>
+                <button class="modal-close" id="modalClose">×</button>
             </div>
             <div class="full-content" id="modal-body"></div>
-            <div style="margin-top: 24px; display: flex; gap: 12px;">
-                <button class="btn btn-primary" onclick="copyContent()">
-                    📋 Copy to Clipboard
-                </button>
+            <div style="margin-top: 24px;">
+                <button class="btn btn-primary" id="copyBtn">📋 Copy to Clipboard</button>
             </div>
         </div>
     </div>
-
     <div class="copy-feedback" id="copy-feedback">Copied!</div>
 
     <script>
-        // Content Data
-        const contentData = [
-            // ESSAYS
-            {
-                id: 'essay-1',
-                title: 'LPs Don\'t Fund Optimism',
-                platform: 'substack',
-                preview: 'The venture capital industry optimizes for IRR. Fund managers pitch LPs on target returns...',
-                body: `LPs Don't Fund Optimism — They Fund Endurance
+    const contentData = [
+        {id:'e1',title:'LPs Don\'t Fund Optimism',platform:'substack',preview:'The venture capital industry optimizes for IRR...',body:`LPs Don\'t Fund Optimism
 
-The venture capital industry optimizes for IRR. Fund managers pitch LPs on target returns. LPs evaluate GPs based on historical performance multiples. Founders raise capital from VCs promising 10x outcomes. The entire ecosystem is structured around maximizing financial returns.
+The venture capital industry optimizes for IRR. Fund managers pitch LPs on target returns. LPs evaluate GPs based on historical performance multiples.
 
-But after five years working with family offices, sovereign wealth funds, and institutional LPs across MENA and global markets, I've come to believe that IRR optimization without LP/GP alignment is a fragile foundation for long-term fund success.
+But after five years working with family offices, sovereign wealth funds, and institutional LPs across MENA, I've come to believe that IRR optimization without LP/GP alignment is a fragile foundation.
 
-The highest-performing GP/LP relationships I've observed aren't built on promises of outsized returns — they're built on strategic alignment that compounds across fund cycles.`,
-                date: '2026-02-15',
-                tags: ['essay', 'lp-positioning']
-            },
-            {
-                id: 'essay-2',
-                title: 'Dubai Is Becoming the LP Capital of MENA',
-                platform: 'substack',
-                preview: 'What\'s happening in Dubai right now is unprecedented...',
-                body: `Dubai Is Becoming the LP Capital of MENA
+The highest-performing GP/LP relationships I've observed aren't built on promises of outsized returns — they're built on strategic alignment that compounds across fund cycles.`,date:'2026-02-15'},
+        {id:'e2',title:'Dubai Is Becoming the LP Capital of MENA',platform:'substack',preview:'What\'s happening in Dubai right now is unprecedented...',body:`Dubai Is Becoming the LP Capital of MENA
 
-What's happening in Dubai right now is unprecedented. Abu Dhabi's Mubadala posted 10% returns in 2025. DIFC is launching an AI sandbox. Fintech licenses are up 47% year-over-year.
+What\'s happening in Dubai right now is unprecedented. Abu Dhabi's Mubadala posted 10% returns in 2025. DIFC is launching an AI sandbox. Fintech licenses are up 47% YoY.
 
-The Gulf isn't just allocating capital — it's becoming the capital.`,
-                date: '2026-02-01',
-                tags: ['essay', 'mena']
-            },
-            {
-                id: 'essay-3',
-                title: 'Series A in MENA',
-                platform: 'substack',
-                preview: 'The Series A gap in MENA is real, but it\'s closing...',
-                body: `Series A in MENA
+The Gulf isn't just allocating capital — it's becoming the capital.`,date:'2026-02-01'},
+        {id:'e3',title:'Series A in MENA',platform:'substack',preview:'The Series A gap in MENA is real...',body:`Series A in MENA
 
-The Series A gap in MENA is real, but it's closing. Last year, MENA AI startups hit $858M — 22% of all VC deployed in the region.
-
-The shift isn't coming. It's already here.`,
-                date: '2026-01-15',
-                tags: ['essay', 'mena']
-            },
-            {
-                id: 'essay-4',
-                title: 'Venture Isn\'t About Predicting Hype',
-                platform: 'substack',
-                preview: 'Venture isn't about predicting hype. It\'s about surviving silence...',
-                body: `Venture Isn't About Predicting Hype
+The Series A gap in MENA is real, but it's closing. Last year, MENA AI startups hit $858M — 22% of all VC deployed in the region.`,date:'2026-01-15'},
+        {id:'e4',title:'Venture Isn\'t About Predicting Hype',platform:'substack',preview:'Venture isn\'t about predicting hype...',body:`Venture Isn\'t About Predicting Hype
 
 Venture isn't about predicting hype. It's about surviving silence.
 
-The best funds aren't smarter. They're slower. They don't chase the noise. They build conviction in silence and compound through the cycles.`,
-                date: '2026-01-01',
-                tags: ['essay']
-            },
+The best funds aren't smarter. They're slower.`,date:'2026-01-01'},
+        {id:'s1',title:'Alex Jotic — UAE Tax Expert',platform:'general',preview:'How EU professionals can legally optimize tax exposure...',body:`Alex Jotic — Episode Notes
 
-            // SHOW NOTES
-            {
-                id: 'show-1',
-                title: 'Alex Jotic — Exited Founder & UAE Tax Expert',
-                platform: 'general',
-                preview: 'How EU professionals can legally optimize tax exposure through UAE residency...',
-                body: `### How We Met
-I met Alex Jotic through a mutual connection in the Dubai tech scene. Someone mentioned "the guy who helps EU professionals legally route their income through the UAE" — and I knew I had to talk to him.
+How EU professionals can legally optimize tax exposure through UAE residency.
 
-### Alex's Journey
-Alex started his career building and selling software. He exited his first company, moved to the UAE, and started exploring how to structure his post-exit life. That's when he realized the tax routing opportunity.
-
-### Key Insights
+Key insights:
 1. UAE residency + company formation = legal tax optimization
-2. Compliance is everything — structure it correctly
-3. The UAE is a testbed for the future of location arbitrage`,
-                date: '2026-02-20',
-                tags: ['show-notes']
-            },
-            {
-                id: 'show-2',
-                title: 'Chris Haunschild — Investor & Advisor',
-                platform: 'general',
-                preview: 'Chris brings 20+ years of investment experience...',
-                body: `### Episode Summary
-Chris Haunschild joins to discuss the evolving landscape of capital formation in emerging markets.
+2. Compliance is everything
+3. The UAE is a testbed for location arbitrage`,date:'2026-02-20',tags:['show-notes']},
+        {id:'s2',title:'Chris Haunschild — Investor',platform:'general',preview:'Chris brings 20+ years of investment experience...',body:`Chris Haunschild — Episode Notes
 
-### Key Topics
-- Family office allocation strategies
-- Direct vs fund investing
-- The role of sovereign wealth in venture`,
-                date: '2026-02-15',
-                tags: ['show-notes']
-            },
-            {
-                id: 'show-3',
-                title: 'Vit Jedlicka — Venture Ecosystem Builder',
-                platform: 'general',
-                preview: 'Vit is building the connective tissue for MENA venture...',
-                body: `### About Vit
-Vit Jedlicka is building the connective tissue for MENA venture through Tech Tuesdays and other ecosystem initiatives.
+Family office allocation strategies, direct vs fund investing, sovereign wealth in venture.`,date:'2026-02-15',tags:['show-notes']},
+        {id:'s3',title:'Vit Jedlicka — Ecosystem Builder',platform:'general',preview:'Vit is building the connective tissue for MENA...',body:`Vit Jedlicka — Episode Notes
 
-### Discussion Points
-- Building community in Dubai
-- The importance of consistent gatherings
-- How to connect founders with investors`,
-                date: '2026-02-10',
-                tags: ['show-notes']
-            },
-            {
-                id: 'show-4',
-                title: 'Zee Wang — Crypto & Infrastructure',
-                platform: 'general',
-                preview: 'Zee discusses the intersection of crypto infrastructure and traditional finance...',
-                body: `### Episode Overview
-Zee Wang joins to discuss crypto infrastructure, tokenization, and the future of digital assets in the Gulf.
+Building community in Dubai, importance of consistent gatherings, connecting founders with investors.`,date:'2026-02-10',tags:['show-notes']},
+        {id:'s4',title:'Zee Wang — Crypto & Infra',platform:'general',preview:'Zee discusses crypto infrastructure...',body:`Zee Wang — Episode Notes
 
-### Key Themes
-- RWA tokenization trends
-- Dubai as a crypto hub
-- Institutional adoption`,
-                date: '2026-02-05',
-                tags: ['show-notes']
-            },
+RWA tokenization trends, Dubai as crypto hub, institutional adoption.`,date:'2026-02-05',tags:['show-notes']},
+        {id:'x1',title:'Gulf AI Thesis',platform:'twitter',preview:'Gulf isn\'t just funding AI. It\'s building the entire value chain...',body:`Gulf isn't just funding AI. It's building the entire value chain.
 
-            // TWITTER / X
-            {
-                id: 'x-1',
-                title: 'Gulf AI Thesis Thread',
-                platform: 'twitter',
-                preview: 'Gulf isn\'t just funding AI. It\'s building the entire value chain...',
-                body: `Gulf isn't just funding AI. It's building the entire value chain.
+Mubadala posted 10% returns in 2025. DIFC's AI sandbox launches Q2. $4T AI market by 2027.
 
-Mubadala posted 10% returns in 2025. DIFC's AI sandbox launches Q2 with fintech licenses up 47% YoY. Saudi's Humain just dropped billions into xAI infrastructure.
-
-$4 trillion AI market by 2027. The picks and shovels thesis is holding. And sovereign Gulf capital is positioning to own it.
-
-If you're raising for AI and ignoring Gulf LPs, you're missing the most aggressive capital pools right now.
-
-Where else is sovereign capital moving this fast?`,
-                date: '2026-03-03',
-                tags: ['thread', 'ai', 'gulf']
-            },
-            {
-                id: 'x-2',
-                title: '22% MENA Stat',
-                platform: 'twitter',
-                preview: '22% of all MENA VC is now AI...',
-                body: `22% of all MENA VC is now AI.
+If you're raising for AI and ignoring Gulf LPs, you're missing the most aggressive capital pools right now.`,date:'2026-03-03'},
+        {id:'x2',title:'22% MENA Stat',platform:'twitter',preview:'22% of all MENA VC is now AI...',body:`22% of all MENA VC is now AI.
 
 $858M into AI startups last year. Up from under 5% two years ago.
 
-The shift isn't coming. It already happened.`,
-                date: '2026-03-03',
-                tags: ['post', 'ai', 'mena']
-            },
-            {
-                id: 'x-3',
-                title: '6-News Wrap',
-                platform: 'twitter',
-                preview: '6 stories from this week...',
-                body: `6 stories from this week:
+The shift isn't coming. It already happened.`,date:'2026-03-03'},
+        {id:'x3',title:'6-News Wrap',platform:'twitter',preview:'6 stories from this week...',body:`6 stories:
 
-1/ Mubadala 10% returns — Gulf SWF shifting to alts
-2/ Sequoia $4T AI prediction — picks & shovels thesis
-3/ DIFC AI sandbox Q2 — fintech licenses +47%
-4/ Gulf FOs bypassing funds — direct deals up 300%
-5/ Blue Owl gated — private credit narrative cracked
-6/ Zelenskiy in Gulf — Ukraine courting Gulf capital
+1/ Mubadala 10% returns
+2/ Sequoia $4T AI
+3/ DIFC AI sandbox +47%
+4/ Gulf FOs direct deals
+5/ Blue Owl gated
+6/ Zelenskiy in Gulf`,date:'2026-03-03'},
+        {id:'l1',title:'Private Credit Risk',platform:'linkedin',preview:'Blue Owl just gated redemptions...',body:`Blue Owl just gated redemptions. Private credit's "safe yield" narrative just cracked.
 
-Thread 🧵`,
-                date: '2026-03-03',
-                tags: ['thread', 'news']
-            },
-
-            // LINKEDIN
-            {
-                id: 'li-1',
-                title: 'Private Credit Risk',
-                platform: 'linkedin',
-                preview: 'Blue Owl just gated redemptions. Private credit\'s "safe yield" narrative just cracked...',
-                body: `Blue Owl just gated redemptions. Private credit's "safe yield" narrative just cracked.
-
-PE stocks tumbled. Redemptions halted. What LPs thought was stable income is actually liquidity-trapped.
-
-Here's what nobody tells you: the redemption schedule matters more than the yield. Most LPs don't ask — and that's when they get trapped.
-
-Before you allocate to private credit, ask:
-- What's the actual redemption schedule?
+Before you allocate, ask:
+- What's the redemption schedule?
 - What's the underlying asset liquidity?
-- What's the manager's track record through downturns?
 
-The funds that survive the next correction will be the ones who asked these questions first.`,
-                date: '2026-03-03',
-                tags: ['post', 'private-credit', 'risk']
-            },
-            {
-                id: 'li-2',
-                title: 'The Capital Operating System',
-                platform: 'linkedin',
-                preview: 'Most capital connectors introduce people over coffee and hope something sticks...',
-                body: `Most capital connectors introduce people over coffee and hope something sticks.
+The funds that survive the next correction will be the ones who asked these questions first.`,date:'2026-03-03'},
+        {id:'l2',title:'The Capital Operating System',platform:'linkedin',preview:'Most capital connectors introduce people over coffee...',body:`Most capital connectors introduce people over coffee and hope something sticks.
 
 That's not a system. That's networking cosplay.
 
-What LPs actually need — especially new-money family offices entering alternatives for the first time — is an operating system. Intake. Qualification. Deal flow matching. Follow-up. Reporting.
+What LPs need is an operating system. Intake. Qualification. Deal flow matching. Follow-up. Reporting.
 
-I spent the last few years building exactly that. Not a Rolodex. A repeatable process that turns LP interest into committed capital.
+The firms that figure this out will raise faster than everyone else.`,date:'2026-02-28'},
+        {id:'l3',title:'What 10 Years in Crypto Taught Me',platform:'linkedin',preview:'I started working in a hedge fund at 17...',body:`I started working in a hedge fund in Kyiv at 17. By 25 I'd moved ~$60m in OTC volume.
 
-The firms that figure this out will raise faster than everyone else. The ones that keep relying on "warm intros" will keep wondering why their close rate is 3%.`,
-                date: '2026-02-28',
-                tags: ['post', 'lp']
-            },
-            {
-                id: 'li-3',
-                title: 'What 10 Years in Crypto Taught Me About LPs',
-                platform: 'linkedin',
-                preview: 'I started working in a hedge fund in Kyiv at 17...',
-                body: `I started working in a hedge fund in Kyiv at 17. By 22 I was running OTC desks. By 25 I'd moved ~$60m in OTC volume and had a $300m RWA pipeline.
+The hardest part isn't finding deals. It's earning the trust of the person writing the check.
 
-Here's the thing nobody told me early on: the hardest part of capital markets isn't finding deals. It's earning the trust of the person writing the check.
+What works: specificity. Show them exactly what you did, for whom, and what happened.`,date:'2026-02-25'},
+        {id:'i1',title:'Cold Email Template',platform:'instagram',preview:'This cold email template got me a 40% response rate...',body:`HOOK: "This cold email template got me a 40% response rate from family offices."
 
-LPs — especially HNWIs and family offices — are allergic to hype. They've been burned. They've seen the pitch decks that promised 100x.
+VALUE: Three rules. One — lead with value, not an ask. Two — be weirdly specific. Three — keep it to five sentences.
 
-What works: specificity. Show them exactly what you did, for whom, and what happened. No "we're revolutionizing." Just "here's the outcome."
+CTA: Comment 'TEMPLATE' and I'll send them.`,date:'2026-02-20',tags:['reel-script']},
+        {id:'i2',title:'Why I Left Crypto',platform:'instagram',preview:'I started working in crypto at 17...',body:`HOOK: "I started working in crypto at 17. Built a career. Became a CEO. And then I walked away."
 
-That lesson took me years. It's now the foundation of everything I do.`,
-                date: '2026-02-25',
-                tags: ['post', 'crypto', 'lp']
-            },
+VALUE: The smartest people I met weren't building tokens. They were building relationships with family offices and sovereign funds.
 
-            // INSTAGRAM
-            {
-                id: 'ig-1',
-                title: 'Cold Email Template',
-                platform: 'instagram',
-                preview: 'This cold email template got me a 40% response rate...',
-                body: `HOOK: "This cold email template got me a 40% response rate from family offices. Most people get 5%."
+CTA: Follow for finance from the inside.`,date:'2026-02-18',tags:['reel-script']}
+    ];
 
-CONTEXT: "I've raised over $10 million from family offices and HNWIs in the Gulf. Here's what I learned about what actually gets opened."
+    let currentContent = '';
+    let currentTitle = '';
 
-VALUE: "Three rules. One — lead with value, not an ask. Offer an intro, a data point, something useful before you want anything. Two — be weirdly specific. 'I noticed your Q3 allocation to real assets increased' hits different than 'I'd love to connect.' Three — keep it to five sentences. Family offices get 200 emails a day. Yours needs to be the one they can read in 15 seconds."
-
-CTA: "Want me to break down the actual templates? Comment 'TEMPLATE' and I'll send them."`,
-                date: '2026-02-20',
-                tags: ['reel-script']
-            },
-            {
-                id: 'ig-2',
-                title: 'Why I Left Crypto',
-                platform: 'instagram',
-                preview: 'I started working in crypto at 17. Built a career. Became a CEO. And then I walked away...',
-                body: `HOOK: "I started working in crypto at 17. Built a career. Became a CEO. And then I walked away."
-
-CONTEXT: "10 years in crypto and tech — raised capital, led a company, sourced deals worth billions in paper value. LayerZero, Fuel, CoinGecko — I was in the room."
-
-VALUE: "But here's what nobody tells you about crypto: the smartest people I met weren't building tokens. They were building relationships with family offices, sovereign funds, and institutional LPs. The money behind the money. That's where the real game is. Capital formation — connecting the best funds with the best capital."
-
-CTA: "Follow if you want to see what finance actually looks like from the inside. Not the Twitter version."`,
-                date: '2026-02-18',
-                tags: ['reel-script']
-            }
-        ];
-
-        let currentContent = '';
-
-        // Tab switching
-        document.querySelectorAll('.nav-tab').forEach(tab => {
-            tab.addEventListener('click', () => {
-                document.querySelectorAll('.nav-tab').forEach(t => t.classList.remove('active'));
-                document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
-                tab.classList.add('active');
-                document.getElementById(tab.dataset.tab).classList.add('active');
-            });
+    // Tab switching
+    document.querySelectorAll('.nav-tab').forEach(tab => {
+        tab.addEventListener('click', function() {
+            document.querySelectorAll('.nav-tab').forEach(t => t.classList.remove('active'));
+            document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
+            this.classList.add('active');
+            document.getElementById(this.dataset.tab).classList.add('active');
         });
+    });
 
-        // Render content
-        function renderContent() {
-            const platforms = {
-                'overview': contentData.slice(0, 6),
-                'substack': contentData.filter(c => c.platform === 'substack'),
-                'twitter': contentData.filter(c => c.platform === 'twitter'),
-                'linkedin': contentData.filter(c => c.platform === 'linkedin'),
-                'instagram': contentData.filter(c => c.platform === 'instagram'),
-                'shows': contentData.filter(c => c.platform === 'general' && c.tags.includes('show-notes')),
-                'today': contentData.filter(c => c.date === '2026-03-03')
-            };
+    function getBadgeClass(platform) {
+        return 'platform-' + platform;
+    }
 
-            Object.keys(platforms).forEach(key => {
-                const container = document.getElementById(key === 'overview' ? 'latest-content' : key + '-content');
-                if (container) {
-                    container.innerHTML = platforms[key].map(item => `
-                        <div class="content-card">
-                            <div class="content-header">
-                                <h3 class="content-title">${item.title}</h3>
-                                <div class="content-meta">
-                                    <span class="platform-badge platform-${item.platform}">${item.platform}</span>
-                                </div>
-                            </div>
-                            <div class="content-preview">${item.preview}</div>
-                            <div class="content-actions">
-                                <button class="btn btn-primary" onclick="openModal('${item.id}')">📄 View & Copy</button>
-                            </div>
-                        </div>
-                    `).join('');
-                }
-            });
-        }
+    function renderContent() {
+        const containers = {
+            'overview': { data: contentData.slice(0, 6), el: 'latest-content' },
+            'substack': { data: contentData.filter(c => c.platform === 'substack'), el: 'substack-content' },
+            'twitter': { data: contentData.filter(c => c.platform === 'twitter'), el: 'twitter-content' },
+            'linkedin': { data: contentData.filter(c => c.platform === 'linkedin'), el: 'linkedin-content' },
+            'instagram': { data: contentData.filter(c => c.platform === 'instagram'), el: 'instagram-content' },
+            'shows': { data: contentData.filter(c => c.platform === 'general' && c.tags && c.tags.includes('show-notes')), el: 'shows-content' },
+            'today': { data: contentData.filter(c => c.date === '2026-03-03'), el: 'today-content' }
+        };
 
-        function openModal(id) {
-            const item = contentData.find(c => c.id === id);
-            if (!item) return;
+        Object.keys(containers).forEach(key => {
+            const { data, el } = containers[key];
+            const container = document.getElementById(el);
+            if (!container) return;
             
-            currentContent = item.body;
-            document.getElementById('modal-title').textContent = item.title;
-            document.getElementById('modal-body').textContent = item.body;
-            document.getElementById('modal').classList.add('active');
-        }
+            if (data.length === 0) {
+                container.innerHTML = '<p style="color: var(--text-secondary); text-align: center; padding: 40px;">0 Content</p>';
+                return;
+            }
 
-        function closeModal() {
-            document.getElementById('modal').classList.remove('active');
-        }
-
-        function copyContent() {
-            navigator.clipboard.writeText(currentContent).then(() => {
-                const feedback = document.getElementById('copy-feedback');
-                feedback.classList.add('show');
-                setTimeout(() => feedback.classList.remove('show'), 2000);
-            });
-        }
-
-        // Close modal on escape
-        document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape') closeModal();
+            container.innerHTML = data.map(item => `
+                <div class="content-card">
+                    <div class="content-header">
+                        <h3 class="content-title">${item.title}</h3>
+                        <span class="platform-badge ${getBadgeClass(item.platform)}">${item.platform}</span>
+                    </div>
+                    <div class="content-preview">${item.preview}</div>
+                    <div class="content-actions">
+                        <button class="btn btn-primary" onclick="openModal('${item.id}')">📋 View & Copy</button>
+                    </div>
+                </div>
+            `).join('');
         });
+    }
 
-        // Close modal on background click
-        document.getElementById('modal').addEventListener('click', (e) => {
-            if (e.target.id === 'modal') closeModal();
+    function openModal(id) {
+        const item = contentData.find(c => c.id === id);
+        if (!item) return;
+        currentContent = item.body;
+        currentTitle = item.title;
+        document.getElementById('modal-title').textContent = item.title;
+        document.getElementById('modal-body').textContent = item.body;
+        document.getElementById('modal').classList.add('active');
+    }
+
+    function closeModal() {
+        document.getElementById('modal').classList.remove('active');
+    }
+
+    document.getElementById('modalClose').addEventListener('click', closeModal);
+    document.getElementById('modal').addEventListener('click', function(e) {
+        if (e.target === this) closeModal();
+    });
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') closeModal();
+    });
+
+    document.getElementById('copyBtn').addEventListener('click', function() {
+        navigator.clipboard.writeText(currentContent).then(function() {
+            const feedback = document.getElementById('copy-feedback');
+            feedback.classList.add('show');
+            setTimeout(function() { feedback.classList.remove('show'); }, 2000);
         });
+    });
 
-        // Initial render
-        renderContent();
+    // Initialize
+    renderContent();
     </script>
 </body>
 </html>
